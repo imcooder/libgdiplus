@@ -12,7 +12,19 @@ DEFINE_MEMBER(GdipCreatePen1);
 GpStatus WINGDIPAPI
 GdipCreatePen1(ARGB color, REAL width, GpUnit unit, GpPen **pen)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipCreatePen1 == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipCreatePen1);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipCreatePen1)(color, width, unit, pen);
+		}
+	}
+	return status;
 }
 
 
@@ -22,7 +34,19 @@ DEFINE_MEMBER(GdipCreatePen2);
 GpStatus WINGDIPAPI
 GdipCreatePen2(GpBrush *brush, REAL width, GpUnit unit, GpPen **pen)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipCreatePen2 == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipCreatePen2);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipCreatePen2)(brush, width, unit, pen);
+		}
+	}
+	return status;
 }
 
 
@@ -32,7 +56,19 @@ DEFINE_MEMBER(GdipClonePen);
 GpStatus WINGDIPAPI
 GdipClonePen(GpPen *pen, GpPen **clonepen)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipClonePen == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipClonePen);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipClonePen)(pen, clonepen);
+		}
+	}
+	return status;
 }
 
 
@@ -42,7 +78,19 @@ DEFINE_MEMBER(GdipDeletePen);
 GpStatus WINGDIPAPI
 GdipDeletePen(GpPen *pen)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipDeletePen == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipDeletePen);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipDeletePen)(pen);
+		}
+	}
+	return status;
 }
 
 
@@ -52,7 +100,19 @@ DEFINE_MEMBER(GdipSetPenWidth);
 GpStatus WINGDIPAPI
 GdipSetPenWidth(GpPen *pen, REAL width)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenWidth == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenWidth);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenWidth)(pen, width);
+		}
+	}
+	return status;
 }
 
 
@@ -62,7 +122,19 @@ DEFINE_MEMBER(GdipGetPenWidth);
 GpStatus WINGDIPAPI
 GdipGetPenWidth(GpPen *pen, REAL *width)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenWidth == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenWidth);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenWidth)(pen, width);
+		}
+	}
+	return status;
 }
 
 
@@ -72,7 +144,19 @@ DEFINE_MEMBER(GdipSetPenUnit);
 GpStatus WINGDIPAPI
 GdipSetPenUnit(GpPen *pen, GpUnit unit)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenUnit == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenUnit);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenUnit)(pen, unit);
+		}
+	}
+	return status;
 }
 
 
@@ -82,7 +166,19 @@ DEFINE_MEMBER(GdipGetPenUnit);
 GpStatus WINGDIPAPI
 GdipGetPenUnit(GpPen *pen, GpUnit *unit)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenUnit == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenUnit);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenUnit)(pen, unit);
+		}
+	}
+	return status;
 }
 
 
@@ -94,7 +190,19 @@ GpStatus WINGDIPAPI
 GdipSetPenLineCap197819(GpPen *pen, GpLineCap startCap, GpLineCap endCap,
                   GpDashCap dashCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenLineCap197819 == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenLineCap197819);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenLineCap197819)(pen, startCap, endCap, dashCap);
+		}
+	}
+	return status;
 }
 
 
@@ -104,7 +212,19 @@ DEFINE_MEMBER(GdipSetPenStartCap);
 GpStatus WINGDIPAPI
 GdipSetPenStartCap(GpPen *pen, GpLineCap startCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenStartCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenStartCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenStartCap)(pen, startCap);
+		}
+	}
+	return status;
 }
 
 
@@ -114,7 +234,19 @@ DEFINE_MEMBER(GdipSetPenEndCap);
 GpStatus WINGDIPAPI
 GdipSetPenEndCap(GpPen *pen, GpLineCap endCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenEndCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenEndCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenEndCap)(pen, endCap);
+		}
+	}
+	return status;
 }
 
 
@@ -124,7 +256,19 @@ DEFINE_MEMBER(GdipSetPenDashCap197819);
 GpStatus WINGDIPAPI
 GdipSetPenDashCap197819(GpPen *pen, GpDashCap dashCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenDashCap197819 == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenDashCap197819);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenDashCap197819)(pen, dashCap);
+		}
+	}
+	return status;
 }
 
 
@@ -134,7 +278,19 @@ DEFINE_MEMBER(GdipGetPenStartCap);
 GpStatus WINGDIPAPI
 GdipGetPenStartCap(GpPen *pen, GpLineCap *startCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenStartCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenStartCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenStartCap)(pen, startCap);
+		}
+	}
+	return status;
 }
 
 
@@ -144,7 +300,19 @@ DEFINE_MEMBER(GdipGetPenEndCap);
 GpStatus WINGDIPAPI
 GdipGetPenEndCap(GpPen *pen, GpLineCap *endCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenEndCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenEndCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenEndCap)(pen, endCap);
+		}
+	}
+	return status;
 }
 
 
@@ -154,7 +322,19 @@ DEFINE_MEMBER(GdipGetPenDashCap197819);
 GpStatus WINGDIPAPI
 GdipGetPenDashCap197819(GpPen *pen, GpDashCap *dashCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenDashCap197819 == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenDashCap197819);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenDashCap197819)(pen, dashCap);
+		}
+	}
+	return status;
 }
 
 
@@ -164,7 +344,19 @@ DEFINE_MEMBER(GdipSetPenLineJoin);
 GpStatus WINGDIPAPI
 GdipSetPenLineJoin(GpPen *pen, GpLineJoin lineJoin)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenLineJoin == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenLineJoin);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenLineJoin)(pen, lineJoin);
+		}
+	}
+	return status;
 }
 
 
@@ -174,7 +366,19 @@ DEFINE_MEMBER(GdipGetPenLineJoin);
 GpStatus WINGDIPAPI
 GdipGetPenLineJoin(GpPen *pen, GpLineJoin *lineJoin)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenLineJoin == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenLineJoin);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenLineJoin)(pen, lineJoin);
+		}
+	}
+	return status;
 }
 
 
@@ -184,7 +388,19 @@ DEFINE_MEMBER(GdipSetPenCustomStartCap);
 GpStatus WINGDIPAPI
 GdipSetPenCustomStartCap(GpPen *pen, GpCustomLineCap* customCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenCustomStartCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenCustomStartCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenCustomStartCap)(pen, customCap);
+		}
+	}
+	return status;
 }
 
 
@@ -194,7 +410,19 @@ DEFINE_MEMBER(GdipGetPenCustomStartCap);
 GpStatus WINGDIPAPI
 GdipGetPenCustomStartCap(GpPen *pen, GpCustomLineCap** customCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenCustomStartCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenCustomStartCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenCustomStartCap)(pen, customCap);
+		}
+	}
+	return status;
 }
 
 
@@ -204,7 +432,19 @@ DEFINE_MEMBER(GdipSetPenCustomEndCap);
 GpStatus WINGDIPAPI
 GdipSetPenCustomEndCap(GpPen *pen, GpCustomLineCap* customCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenCustomEndCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenCustomEndCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenCustomEndCap)(pen, customCap);
+		}
+	}
+	return status;
 }
 
 
@@ -214,7 +454,19 @@ DEFINE_MEMBER(GdipGetPenCustomEndCap);
 GpStatus WINGDIPAPI
 GdipGetPenCustomEndCap(GpPen *pen, GpCustomLineCap** customCap)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenCustomEndCap == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenCustomEndCap);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenCustomEndCap)(pen, customCap);
+		}
+	}
+	return status;
 }
 
 
@@ -224,7 +476,19 @@ DEFINE_MEMBER(GdipSetPenMiterLimit);
 GpStatus WINGDIPAPI
 GdipSetPenMiterLimit(GpPen *pen, REAL miterLimit)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenMiterLimit == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenMiterLimit);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenMiterLimit)(pen, miterLimit);
+		}
+	}
+	return status;
 }
 
 
@@ -234,7 +498,19 @@ DEFINE_MEMBER(GdipGetPenMiterLimit);
 GpStatus WINGDIPAPI
 GdipGetPenMiterLimit(GpPen *pen, REAL *miterLimit)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenMiterLimit == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenMiterLimit);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenMiterLimit)(pen, miterLimit);
+		}
+	}
+	return status;
 }
 
 
@@ -244,7 +520,19 @@ DEFINE_MEMBER(GdipSetPenMode);
 GpStatus WINGDIPAPI
 GdipSetPenMode(GpPen *pen, GpPenAlignment penMode)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenMode == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenMode);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenMode)(pen, penMode);
+		}
+	}
+	return status;
 }
 
 
@@ -254,7 +542,19 @@ DEFINE_MEMBER(GdipGetPenMode);
 GpStatus WINGDIPAPI
 GdipGetPenMode(GpPen *pen, GpPenAlignment *penMode)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenMode == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenMode);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenMode)(pen, penMode);
+		}
+	}
+	return status;
 }
 
 
@@ -264,7 +564,19 @@ DEFINE_MEMBER(GdipSetPenTransform);
 GpStatus WINGDIPAPI
 GdipSetPenTransform(GpPen *pen, GpMatrix *matrix)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenTransform)(pen, matrix);
+		}
+	}
+	return status;
 }
 
 
@@ -274,7 +586,19 @@ DEFINE_MEMBER(GdipGetPenTransform);
 GpStatus WINGDIPAPI
 GdipGetPenTransform(GpPen *pen, GpMatrix *matrix)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenTransform)(pen, matrix);
+		}
+	}
+	return status;
 }
 
 
@@ -284,7 +608,19 @@ DEFINE_MEMBER(GdipResetPenTransform);
 GpStatus WINGDIPAPI
 GdipResetPenTransform(GpPen *pen)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipResetPenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipResetPenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipResetPenTransform)(pen);
+		}
+	}
+	return status;
 }
 
 
@@ -296,7 +632,19 @@ GpStatus WINGDIPAPI
 GdipMultiplyPenTransform(GpPen *pen, GDIPCONST GpMatrix *matrix,
                            GpMatrixOrder order)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipMultiplyPenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipMultiplyPenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipMultiplyPenTransform)(pen, matrix, order);
+		}
+	}
+	return status;
 }
 
 
@@ -308,7 +656,19 @@ GpStatus WINGDIPAPI
 GdipTranslatePenTransform(GpPen *pen, REAL dx, REAL dy,
                             GpMatrixOrder order)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipTranslatePenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipTranslatePenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipTranslatePenTransform)(pen, dx, dy, order);
+		}
+	}
+	return status;
 }
 
 
@@ -320,7 +680,19 @@ GpStatus WINGDIPAPI
 GdipScalePenTransform(GpPen *pen, REAL sx, REAL sy,
                             GpMatrixOrder order)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipScalePenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipScalePenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipScalePenTransform)(pen, sx, sy, order);
+		}
+	}
+	return status;
 }
 
 
@@ -330,7 +702,19 @@ DEFINE_MEMBER(GdipRotatePenTransform);
 GpStatus WINGDIPAPI
 GdipRotatePenTransform(GpPen *pen, REAL angle, GpMatrixOrder order)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipRotatePenTransform == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipRotatePenTransform);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipRotatePenTransform)(pen, angle, order);
+		}
+	}
+	return status;
 }
 
 
@@ -340,7 +724,19 @@ DEFINE_MEMBER(GdipSetPenColor);
 GpStatus WINGDIPAPI
 GdipSetPenColor(GpPen *pen, ARGB argb)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenColor == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenColor);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenColor)(pen, argb);
+		}
+	}
+	return status;
 }
 
 
@@ -350,7 +746,19 @@ DEFINE_MEMBER(GdipGetPenColor);
 GpStatus WINGDIPAPI
 GdipGetPenColor(GpPen *pen, ARGB *argb)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenColor == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenColor);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenColor)(pen, argb);
+		}
+	}
+	return status;
 }
 
 
@@ -360,7 +768,19 @@ DEFINE_MEMBER(GdipSetPenBrushFill);
 GpStatus WINGDIPAPI
 GdipSetPenBrushFill(GpPen *pen, GpBrush *brush)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenBrushFill == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenBrushFill);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenBrushFill)(pen, brush);
+		}
+	}
+	return status;
 }
 
 
@@ -370,7 +790,19 @@ DEFINE_MEMBER(GdipGetPenBrushFill);
 GpStatus WINGDIPAPI
 GdipGetPenBrushFill(GpPen *pen, GpBrush **brush)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenBrushFill == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenBrushFill);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenBrushFill)(pen, brush);
+		}
+	}
+	return status;
 }
 
 
@@ -380,7 +812,19 @@ DEFINE_MEMBER(GdipGetPenFillType);
 GpStatus WINGDIPAPI
 GdipGetPenFillType(GpPen *pen, GpPenType* type)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenFillType == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenFillType);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenFillType)(pen, type);
+		}
+	}
+	return status;
 }
 
 
@@ -390,7 +834,19 @@ DEFINE_MEMBER(GdipGetPenDashStyle);
 GpStatus WINGDIPAPI
 GdipGetPenDashStyle(GpPen *pen, GpDashStyle *dashstyle)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenDashStyle == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenDashStyle);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenDashStyle)(pen, dashstyle);
+		}
+	}
+	return status;
 }
 
 
@@ -400,7 +856,19 @@ DEFINE_MEMBER(GdipSetPenDashStyle);
 GpStatus WINGDIPAPI
 GdipSetPenDashStyle(GpPen *pen, GpDashStyle dashstyle)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenDashStyle == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenDashStyle);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenDashStyle)(pen, dashstyle);
+		}
+	}
+	return status;
 }
 
 
@@ -410,7 +878,19 @@ DEFINE_MEMBER(GdipGetPenDashOffset);
 GpStatus WINGDIPAPI
 GdipGetPenDashOffset(GpPen *pen, REAL *offset)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenDashOffset == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenDashOffset);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenDashOffset)(pen, offset);
+		}
+	}
+	return status;
 }
 
 
@@ -420,7 +900,19 @@ DEFINE_MEMBER(GdipSetPenDashOffset);
 GpStatus WINGDIPAPI
 GdipSetPenDashOffset(GpPen *pen, REAL offset)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenDashOffset == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenDashOffset);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenDashOffset)(pen, offset);
+		}
+	}
+	return status;
 }
 
 
@@ -430,7 +922,19 @@ DEFINE_MEMBER(GdipGetPenDashCount);
 GpStatus WINGDIPAPI
 GdipGetPenDashCount(GpPen *pen, INT *count)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenDashCount == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenDashCount);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenDashCount)(pen, count);
+		}
+	}
+	return status;
 }
 
 
@@ -440,7 +944,19 @@ DEFINE_MEMBER(GdipSetPenDashArray);
 GpStatus WINGDIPAPI
 GdipSetPenDashArray(GpPen *pen, GDIPCONST REAL *dash, INT count)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenDashArray == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenDashArray);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenDashArray)(pen, dash, count);
+		}
+	}
+	return status;
 }
 
 
@@ -450,7 +966,19 @@ DEFINE_MEMBER(GdipGetPenDashArray);
 GpStatus WINGDIPAPI
 GdipGetPenDashArray(GpPen *pen, REAL *dash, INT count)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenDashArray == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenDashArray);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenDashArray)(pen, dash, count);
+		}
+	}
+	return status;
 }
 
 
@@ -460,7 +988,19 @@ DEFINE_MEMBER(GdipGetPenCompoundCount);
 GpStatus WINGDIPAPI
 GdipGetPenCompoundCount(GpPen *pen, INT *count)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenCompoundCount == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenCompoundCount);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenCompoundCount)(pen, count);
+		}
+	}
+	return status;
 }
 
 
@@ -470,7 +1010,19 @@ DEFINE_MEMBER(GdipSetPenCompoundArray);
 GpStatus WINGDIPAPI
 GdipSetPenCompoundArray(GpPen *pen, GDIPCONST REAL *dash, INT count)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipSetPenCompoundArray == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipSetPenCompoundArray);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipSetPenCompoundArray)(pen, dash, count);
+		}
+	}
+	return status;
 }
 
 
@@ -480,7 +1032,19 @@ DEFINE_MEMBER(GdipGetPenCompoundArray);
 GpStatus WINGDIPAPI
 GdipGetPenCompoundArray(GpPen *pen, REAL *dash, INT count)
 {
-    return NotImplemented;
+	GpStatus status = GdiplusNotInitialized;
+	if ( g_hGdiplusModule != 0 )
+	{
+		if ( g_GdipGetPenCompoundArray == NULL )
+		{
+			INITIALIZE_MEMBER(g_hGdiplusModule, GdipGetPenCompoundArray);
+		}
+		if ( g_hGdiplusModule != NULL )
+		{
+			status = (*g_GdipGetPenCompoundArray)(pen, dash, count);
+		}
+	}
+	return status;
 }
 
 
